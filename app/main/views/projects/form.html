@@ -1,0 +1,19 @@
+<form e-submit="save" role="form">
+
+    <:fields:text value="{{ objective }}" label="Write in a few words the objective of this project. e.g. provide primary education for a year"/>
+
+    <:fields:textarea value="{{ description }}" label="Tell us more about this project, such as who, why, where" />
+
+    <:fields:text value="{{ category }}" label="External url of event" />
+    
+    <:fields:select value="{{ category }}" options="{{ CATEGORIES }}"/>
+
+    <:fields:select value="{{ total }}" options="{{ [100, 250, 500] }}" label="Monthly required amount to reach objective" />
+    
+    <:fields:select value="{{ months }}" options="{{ [3, 6, 12] }}" label="Length of project in months"/>
+
+    <:datetime_picker time={{true}} value="{{start_date}}" date_format='%d-%m-%Y %H:%M' />
+
+    <button class="btn btn-ui btn-lg btn-block mrg-btm-10"><i class="fa fa-paper-plane"></i> Save</button>
+
+</form>

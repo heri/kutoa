@@ -1,0 +1,29 @@
+<:Title>
+{{ SITE_TAGLINE }}
+
+<:Body>
+
+<div class="row">
+
+  <form id="searchForm" class="form-horizontal" role="form">
+     <div class="panel-body">
+        <div class="input-group">
+           <span class="input-group-addon"><i class="glyphicon glyphicon-search"></i></span>
+           <input id="login-email" type="text" class="form-control input-lg" value="{{ page._query }}" placeholder="{{SITE_TAGLINE}}">
+        </div>
+     </div>
+  </form>
+
+
+  {{ unless page._page_loaded }}
+    <div id="loading_status"><img src="/app/main/assets/images/ellipsis.svg" ></div>
+  {{ end }}
+
+  {{ upcoming_events.each_with_index do |event,index| }}
+    <:event:event model="{{ event }}" />
+    {{ (page._page_loaded = true) if (index == (CONST_PER_PAGE - 1)) }}
+  {{ end }}
+
+
+
+</div>
