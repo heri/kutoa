@@ -6,6 +6,9 @@ client '/projects/submit', controller: 'project', action: 'new'
 client '/projects/edit/{{ id }}', controller: 'project', action: 'edit'
 client '/projects/{{id}}', controller: 'project', action: 'show'
 
+client '/pledges/{{ id }}', controller: 'card', action: 'pledge'
+client '/thankyou/{{ id }}', controller: 'card', action: 'thankyou'
+
 
 # Routes for login and signup, provided by user_templates component gem
 client '/signup', component: 'user_templates', controller: 'signup'

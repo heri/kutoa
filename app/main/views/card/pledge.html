@@ -1,0 +1,38 @@
+<:Title>
+  Pledge {{ page._objective }}
+
+<:Body>
+
+
+<div class="row">
+  <:awesome:panel title="{{'Pledge: ' + page._objective.to_s}}">
+
+    <div class="media description">
+
+        <a href="/projects/{{ page._id }}"><img src="{{ page._picture }}" style="width: 270px;margin: 0 100px 40px 100px;"/></a>
+
+      <form e-submit="save_pledge" role="form">
+
+
+          <:fields:text value="{{ page._name }}" label="Name"/>
+
+          <:fields:text value="{{ page._number }}" label="Credit Card Number"/>
+
+          <:fields:text value="{{ page._expMonth }}" label="Expiration month"/>
+
+          <:fields:text value="{{ page._expYear }}" label="Expiration Year"/>
+
+          <:fields:text value="{{ page._cvc }}" label="CVC. This is the code on the back of the card, eg: 123"/>
+
+          <!-- <:fields:select value="{{ pledge }}" options="{{ PLANS }}"/> -->
+
+          <button class="btn btn-ui btn-lg btn-block mrg-btm-10">Pledge $10/mo</button>
+
+
+      </form>
+
+      {{ page._customer.to_s }}
+
+    </div>
+  </:awesome:panel>
+</div>

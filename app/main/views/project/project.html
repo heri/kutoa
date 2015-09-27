@@ -18,28 +18,11 @@
   </:awesome:panel:info>
 
 
-  {{ if attrs.single }}
-    <:awesome:panel:profile name="{{ user.name }}" image_url="https://pbs.twimg.com/profile_images/506436961762963456/HW0XmTxX.jpeg">
-      <p><a href="/about"><strong><:awesome:icon icon="check" /> Refugee sponsor verified by Kutoa</strong></a></p>
-      <p>{{ user.bio }}</p>
-    </:awesome:panel:profile>
-  {{ end }}
-
-
   <:awesome:panel:navfooter>
-    <:awesome:link icon="comments-o" href="{{ '/projects/' + id }}" title="Updates"/>
-    <:awesome:link icon="share-alt" href="{{ '/projects/' + id }}" title="Share"/>
+    <:awesome:link icon="calendar" href="{{ '/projects/' + id }}" title="Updates"/>
     <:project_like model="{{ model }}" />
-    <!-- <button title="Pledge"
-      data-sc-key="sbpb_Yjk4ZWI1MTItMzRhYy00ZTQwLWJmY2EtMjJhMTU3YTJiNTJh"
-      data-name="{{objective}}"
-      data-description="Kutoa Donation"
-      data-reference="{{ id }}"
-      data-amount="10"
-      data-color="#776B5F"
-      />Pledge Now
-    </button> -->
+    <!-- <:awesome:link icon="share-alt" href="{{ '/projects/' + id }}" title="Share"/> -->
+    <:awesome:link icon="usd" href="{{ '/pledges/' + id }}" title="Pledge"/>
   </:awesome:panel:navfooter>
-
 
 </:awesome:panel>

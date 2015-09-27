@@ -1,6 +1,8 @@
+
+
 module Main
   class ProjectController < Volt::ModelController
-    before_action only: [:new, :edit, :save, :add_like] do
+    before_action only: [:new, :edit, :save, :add_like, :pledge] do
       require_login('Login')
     end
 

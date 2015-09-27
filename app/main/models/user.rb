@@ -15,7 +15,7 @@ class User < Volt::User
   field :picture
 
   has_many :likes
-
+  has_many :cards
 
   validate login_field, unique: true, length: 8
   validate :email, email: true

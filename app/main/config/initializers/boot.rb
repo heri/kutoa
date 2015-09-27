@@ -9,12 +9,26 @@
 # ^^ this will not send compile in code in the conditional to the client.
 # ^^ this include code required in the conditional.
 
-CONST_PER_PAGE = 10
+unless RUBY_PLATFORM == 'opal'
+require 'simplify'
+# Simplify Commerce details https://www.simplify.com/commerce/app#/account/apiKeys
 
-SITE_TAGLINE = "Building hope for refugees"
+Simplify::public_key = "sbpb_Yjk4ZWI1MTItMzRhYy00ZTQwLWJmY2EtMjJhMTU3YTJiNTJh"
+Simplify::private_key  = "yfu5mycOrMROsm9uzGmxGinLisSnqLgUSDoj4sIYhs55YFFQL0ODSXAOkNtXTToq"
 
-TOP_PERIOD = 172800
 
-ADMIN_ID = "ffb3c3bb8494a2eeb27b36e5"
+
+end
+
+# Site Settings
+SITE_TAGLINE = "Give hope & purpose to refugees"
+
+ADMIN_ID = "d9e2ff5f10e7437560c6bd69"
 
 CATEGORIES = ["Housing", "Education", "Employment"]
+
+# PLANS = ['10', '12.5']
+PLANS = [ '$10/mo', '$12.5mo with Kutoa administration fees' ]
+
+# Pojects / cases per page
+CONST_PER_PAGE = 10

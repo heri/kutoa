@@ -7,6 +7,15 @@
   <:project:project model="{{ model }}"  single="{{ true }}"/>
 </div>
 
+
+<div class="row">
+  <:awesome:panel:profile name="{{ user.name }}" image_url="{{ user.picture }}">
+      <p><a href="/about#verification"><strong><:awesome:icon icon="check" /> Verified by Kutoa</strong></a></p>
+      <p>{{ user.bio }}</p>
+    </:awesome:panel:profile>
+</div>
+
+
 <div class="row" id="comment">
   <:awesome:panel title="Updates">
     <div class="media description">
@@ -14,7 +23,7 @@
         <:comment:show model="{{comment}}"/>
       {{ end }}
 
-      {{ if Volt.current_user? }}
+      {{ if Volt.current_user? && (model.owner? || model.admin?) }}
         <:comment:new_comment project="{{ model }}" />
       {{ end }}
     </div>
