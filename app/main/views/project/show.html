@@ -1,0 +1,22 @@
+<:Title>
+  {{ objective }} - {{ SITE_TAGLINE }}
+
+<:Body>
+
+<div class="row">
+  <:project:project model="{{ model }}"  single="{{ true }}"/>
+</div>
+
+<div class="row" id="comment">
+  <:awesome:panel title="Updates">
+    <div class="media description">
+      {{ comments.each do |comment| }}
+        <:comment:show model="{{comment}}"/>
+      {{ end }}
+
+      {{ if Volt.current_user? }}
+        <:comment:new_comment project="{{ model }}" />
+      {{ end }}
+    </div>
+  </:awesome:panel>
+</div>

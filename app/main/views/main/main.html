@@ -1,17 +1,34 @@
+
 <:Title>
   {{ view main_path, "title", {controller_group: 'main'} }}
 
 <:Body>
   <div class="container">
-    <div class="header">
-      <ul class="nav nav-pills pull-right">
-        <:nav href="/">Home</:nav>
-        <:nav href="/about">About</:nav>
-        <:nav href="/projects/new">New project</:nav>
-        
-        <:user_templates:menu />
-      </ul>
-      <h3 class="text-muted">Kutoa</h3>
+
+    <div class="row weather">
+      <div class="col-xs-12">
+        <div class="panel">
+          <div class="panel-footer" id="tagline">
+            <div class="text-center">
+              <h1 id="site-logo">Kutoa</h1>
+                <p>{{ SITE_TAGLINE}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="header navigation">
+        <:awesome:nav>
+          <:awesome:button href="/" icon="group" label="Help" />
+          <:awesome:button href="/about" icon="question-circle" label="About" />
+          <:awesome:button href="/projects/submit" icon="plus-circle" label="Apply" />
+          <div class="btn-group">
+            <:user_templates:menu />
+          </div>
+        </:awesome:nav>
+      </div>
     </div>
 
     <:volt:notices />
@@ -19,7 +36,20 @@
     {{ view main_path, 'body', {controller_group: 'main'} }}
 
     <div class="footer">
-      <p>&copy; Company {{ Time.now.year }}</p>
+      <center id="signature">
+
+        <div id="arrow-widget" class="btn-group-vertical mrg-btm-20">
+          <:awesome:button:up href="{{ previous_page }}" />
+          <:awesome:button:down href="{{ next_page }}" />
+        </div>
+
+        <br/>
+        Made with ♥ by <a href="https://medium.com/chronicles-of-montr%C3%A9al" e-click="medium">heri</a> at #MastersOfCode
+        <br/>
+        <br/>
+
+
+      </center>
     </div>
 
   </div>
@@ -28,4 +58,3 @@
   <li class="{{ if active_tab? }}active{{ end }}">
     <a href="{{ attrs.href }}">{{ yield }}</a>
   </li>
-

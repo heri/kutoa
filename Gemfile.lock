@@ -180,9 +180,6 @@ GEM
       pony (~> 1.11)
     volt-mongo (0.1.1)
       mongo (~> 1.9.0)
-    volt-user_templates (0.4.0)
-      volt-fields (~> 0.1.0)
-      volt-mailer (~> 0.1.0)
     websocket (1.2.2)
     websocket-driver (0.6.2)
       websocket-extensions (>= 0.1.0)
@@ -214,7 +211,10 @@ DEPENDENCIES
   volt-bootstrap (~> 0.1.0)
   volt-bootstrap_jumbotron_theme (~> 0.1.0)
   volt-datetime_picker (= 0.1.0heri)!
+  volt-fields
   volt-mailer (~> 0.1.0)
   volt-mongo (~> 0.1.0)
   volt-upload!
-  volt-user_templates (~> 0.4.0)
+
+BUNDLED WITH
+   1.10.6

@@ -1,4 +1,21 @@
-# Place your app's docs here.
+# Kutoa - Rebuilding Hope
 
-## New to Volt?
-Be sure to read the volt docs at http://docs.voltframework.com
+## Vision
+
+* Connect potential donators and displaced refugees needing assistance
+* Refugees can post their needs and goals
+* Donators can pledge a monthly amount. When there are enough donators, the amount is given to the refugee
+* Special care is given to make sure genuine refugees & genuine needs are on the site
+
+## Roadmap
+
+V0.1 - Masterscard hackathon
+
+* Signup
+* Post projects
+* Donate
+* Project updates
+
+## Technology
+
+The application is coded with Volt. Docs at http://docs.voltframework.com

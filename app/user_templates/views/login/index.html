@@ -1,0 +1,45 @@
+<:Title>
+  Login
+
+<:Body>
+
+<div class="row">
+  <div class="request-widget panel panel-default">
+    <div class="list-group">
+      <div class="panel-heading text-center message">
+        <h5 class="text-uppercase"><strong>Please Login</strong></h5>
+      </div>
+
+      <div class="span4 offset4 well">
+        <form e-submit="do_login">
+          {{ if errors.present? }}
+            <div class="alert alert-danger">{{ errors }}</div>
+          {{ end }}
+
+          <div class="form-group">
+            <label class="control-label">
+              {{ if use_username? }}
+                Username
+              {{ else }}
+                Email
+              {{ end }}
+            </label>
+            <input class="form-control" type="text" value="{{ login }}" autofocus />
+          </div>
+
+          <div class="form-group">
+            <label class="control-label">Password <small style="font-weight: normal;">(<a tabindex="-1" href="{{ forgot_url }}">forgot password</a>)</small></label>
+            <input class="form-control" type="password" value="{{ password }}">
+          </div>
+
+          <button class="btn btn-info btn-block">Login</button>
+        </form>
+
+        <hr />
+        Don't have an account? <a href="/signup">Signup here</a>
+      </div>
+
+
+    </div>
+  </div>
+</div>

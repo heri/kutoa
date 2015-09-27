@@ -10,13 +10,16 @@ class User < Volt::User
   field :is_host, Numeric
   field :phone_number, String
   field :is_admin, Numeric
-  
+
   # url of picture
   field :picture
 
+  has_many :likes
+
+
   validate login_field, unique: true, length: 8
   validate :email, email: true
-  
+
   def admin?
     Volt.current_user_id == ADMIN_ID
   end

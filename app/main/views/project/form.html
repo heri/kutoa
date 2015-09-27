@@ -1,0 +1,19 @@
+<form e-submit="save" role="form">
+
+    <:fields:text value="{{ objective }}" label="Write in a few words the objective. e.g. provide housing for 6 months"/>
+
+    <:fields:textarea value="{{ description }}" label="Tell us more, such as who, why, where" />
+
+    <:fields:text value="{{ picture }}" label="Picture"/>
+
+    <:fields:select value="{{ category }}" options="{{ CATEGORIES }}" default="Housing"/>
+
+    <:fields:select value="{{ total }}" options="{{ [100, 200, 500] }}" label="Monthly amount required" />
+
+    <:datetime_picker time={{true}} value="{{start_date}}" date_format='%d-%m-%Y %H:%M' />
+
+    <:fields:select value="{{ months }}" options="{{ [3, 6, 12] }}" label="Duration in months"/>
+
+    <:awesome:field:submit label="Save"/>
+
+</form>

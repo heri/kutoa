@@ -9,11 +9,11 @@
 # ^^ this will not send compile in code in the conditional to the client.
 # ^^ this include code required in the conditional.
 
-CONST_PER_PAGE = 20
+CONST_PER_PAGE = 10
+
+SITE_TAGLINE = "Building hope for refugees"
 
 TOP_PERIOD = 172800
-
-SITE_TAGLINE = "Building Hope - Kutoa"
 
 ADMIN_ID = "ffb3c3bb8494a2eeb27b36e5"
 

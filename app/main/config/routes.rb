@@ -2,9 +2,9 @@
 
 client '/about', action: 'about'
 
-client '/projects/submit', controller: 'projects', action: 'new'
-client '/projects/edit/{{ id }}', controller: 'projects', action: 'edit'
-client '/projects/{{id}}', controller: 'projects', action: 'show'
+client '/projects/submit', controller: 'project', action: 'new'
+client '/projects/edit/{{ id }}', controller: 'project', action: 'edit'
+client '/projects/{{id}}', controller: 'project', action: 'show'
 
 
 # Routes for login and signup, provided by user_templates component gem
@@ -16,4 +16,4 @@ client '/account', component: 'user_templates', controller: 'account', action: '
 
 # The main route, this should be last. It will match any params not
 # previously matched.
-client '/', controller: 'projects', action: 'new'
+client '/', controller: 'project', action: 'index'

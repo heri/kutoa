@@ -1,0 +1,40 @@
+<:Title>
+  Your Account
+
+<:Body>
+
+<div class="row">
+  <div class="request-widget panel panel-default">
+    <div class="list-group">
+      <div class="panel-heading text-center message">
+        <h5 class="text-uppercase"><strong>Your Account</strong></h5>
+      </div>
+
+      <div class="span4 offset4 well">
+        <form e-submit="save">
+          <:fields:text value="{{ _name }}" />
+          <:fields:textarea value="{{ _bio }}" />
+          <button class="btn btn-info btn-block">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="request-widget panel panel-default">
+    <div class="list-group">
+      <div class="panel-heading text-center message">
+        <h5 class="text-uppercase"><strong>Update Password</strong></h5>
+      </div>
+
+      <div class="span4 offset4 well">
+
+        <form e-submit="save">
+          <:fields:text type="password" value="{{ _password }}" />
+          <button class="btn btn-info btn-block">Save</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

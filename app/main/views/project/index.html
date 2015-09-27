@@ -1,0 +1,15 @@
+<:Title>
+{{ SITE_TAGLINE }}
+
+<:Body>
+
+<div class="row">
+
+  <:awesome:field placeholder="{{ SITE_TAGLINE }}" icon="search"/>
+
+  {{ approved_projects.each do |project| }}
+    <:project:project model="{{ project }}" />
+  {{ end }}
+
+
+</div>

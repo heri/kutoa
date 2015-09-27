@@ -1,0 +1,5 @@
+{{ if Volt.current_user_id }}
+<a class="btn btn-default {{like_style(model) }}" role="button"  e-click="add_like(model)" title="Click to add to favorites"><i class="fa fa-heart fa-2x"></i><br/><small>{{ model.likes.size }}</small></a>
+{{ else }}
+<:awesome:link icon="heart" href="/login" label="{{ model.ranking }}" title="Like"/>
+{{ end }}

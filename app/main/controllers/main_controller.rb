@@ -9,6 +9,23 @@ module Main
       # Add code for when the about view is loaded
     end
 
+    def current_page
+      (params._page || 1).to_i
+    end
+
+
+    def per_page
+      CONST_PER_PAGE
+    end
+
+    def previous_page
+      (current_page == 1) ? '#' : (url_with({:page => (current_page - 1)}))
+    end
+
+    def next_page
+      url_with({:page => (current_page + 1)})
+    end
+
     private
 
     # The main template contains a #template binding that shows another
