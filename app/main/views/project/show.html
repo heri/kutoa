@@ -16,16 +16,14 @@
 </div>
 
 
-<div class="row" id="comment">
-  <:awesome:panel title="Updates">
-    <div class="media description">
-      {{ comments.each do |comment| }}
-        <:comment:show model="{{comment}}"/>
-      {{ end }}
+<:awesome:panel title="Updates">
+  <div class="media description">
+    {{ comments.each do |comment| }}
+      <:comment:show model="{{comment}}"/>
+    {{ end }}
 
-      {{ if Volt.current_user? && (model.owner? || model.admin?) }}
-        <:comment:new_comment project="{{ model }}" />
-      {{ end }}
-    </div>
-  </:awesome:panel>
-</div>
+    {{ if Volt.current_user? && (model.owner? || model.admin?) }}
+      <:comment:new_comment project="{{ model }}" />
+    {{ end }}
+  </div>
+</:awesome:panel>

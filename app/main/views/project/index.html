@@ -4,12 +4,9 @@
 <:Body>
 
 <div class="row">
-
   <:awesome:field placeholder="{{ SITE_TAGLINE }}" icon="search"/>
+</div>
 
   {{ approved_projects.each do |project| }}
     <:project:project model="{{ project }}" />
   {{ end }}
-
-
-</div>

@@ -24,6 +24,8 @@ gem 'volt-upload', git: 'https://github.com/andrew-carroll/volt-upload'
 # simplify gem by Mastercard to manage recurring donations
 gem 'simplify'
 
+gem 'volt-awesome', git: 'https://github.com/heri/volt-awesome'
+
 # Use rbnacl for message bus encrpytion
 # (optional, if you don't need encryption, disable in app.rb and remove)
 #
