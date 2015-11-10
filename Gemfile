@@ -26,6 +26,8 @@ gem 'simplify'
 
 gem 'volt-awesome', git: 'https://github.com/heri/volt-awesome'
 
+gem "volt-osmaps", :path => "/Users/heri/Sites/volt-osmaps"
+
 # Use rbnacl for message bus encrpytion
 # (optional, if you don't need encryption, disable in app.rb and remove)
 #

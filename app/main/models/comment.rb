@@ -1,8 +1,9 @@
-class History < Volt::Model
+class Comment < Volt::Model
 
     own_by_user
 
     belongs_to :project
+    belongs_to :user
 
     # using component 'volt-upload', url of picture
     field :picture

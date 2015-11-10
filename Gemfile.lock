@@ -17,6 +17,11 @@ GIT
     volt-datetime_picker (0.1.0heri)
       volt-font_awesome
 
+PATH
+  remote: /Users/heri/Sites/volt-osmaps
+  specs:
+    volt-osmaps (0.1.8)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -221,6 +226,7 @@ DEPENDENCIES
   volt-fields
   volt-mailer (~> 0.1.0)
   volt-mongo (~> 0.1.0)
+  volt-osmaps!
   volt-upload!
 
 BUNDLED WITH

@@ -26,6 +26,15 @@ module Main
       url_with({:page => (current_page + 1)})
     end
 
+    def favorites
+      self.model = Volt.current_user.then(&:buffer)
+    end
+
+    def my_likes
+      store.likes.where(user_id: Volt.current_user_id)
+      # Volt.current_user.likes.order({created_at: -1}).all.skip(current_page * per_page).limit(per_page)
+    end
+
     private
 
     # The main template contains a #template binding that shows another

@@ -1,0 +1,9 @@
+<:Title>
+  Account
+<:Body>
+
+<:awesome:panel title="Your Saved Refugee Cases" >
+  {{ my_likes.each do |like| }}
+    <a href="/projects/{{like.project_id}}"  class="list-group-item"><i class="fa fa-map-marker  fa-lg pull-right"></i> {{ like.project.objective }}</a>
+  {{ end }}
+</:awesome:panel>

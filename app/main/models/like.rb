@@ -4,6 +4,7 @@ class Like < Volt::Model
   field :created_at, Time
 
   belongs_to :project
+  belongs_to :user
 
   permissions(:update, :delete) do
     # Only the person who created the post can delete or update it

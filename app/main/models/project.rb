@@ -28,10 +28,8 @@ class Project < Volt::Model
 
   field :created_at, Time
 
-
   # housing, education or employment
   field :category, String
-
 
   has_many :likes
   # Project updates

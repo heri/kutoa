@@ -14,3 +14,5 @@ component 'fields'
 component 'upload'
 
 component 'awesome'
+
+component 'osmaps'

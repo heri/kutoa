@@ -3,26 +3,24 @@
 
 <:Body>
 
-<div class="row">
   <:project:project model="{{ model }}"  single="{{ true }}"/>
-</div>
 
 
 <div class="row">
   <:awesome:panel:profile name="{{ user.name }}" image_url="{{ user.picture }}">
-      <p><a href="/about#verification"><strong><:awesome:icon icon="check" /> Verified by Kutoa</strong></a></p>
+      <p><a href="/about#verification"><strong><:awesome:icon icon="check" /> Refugee Sponsor Verified by Kutoa</strong></a></p>
       <p>{{ user.bio }}</p>
     </:awesome:panel:profile>
 </div>
 
 
-<:awesome:panel title="Updates">
+<:awesome:panel title="Comments">
   <div class="media description">
     {{ comments.each do |comment| }}
       <:comment:show model="{{comment}}"/>
     {{ end }}
 
-    {{ if Volt.current_user? && (model.owner? || model.admin?) }}
+    {{ if Volt.current_user? }}
       <:comment:new_comment project="{{ model }}" />
     {{ end }}
   </div>

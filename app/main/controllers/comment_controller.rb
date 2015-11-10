@@ -11,7 +11,7 @@ module Main
     end
 
     # Saves a comment by current user
-    def save_comment
+    def save_project_comment
       model._created_at = Time.now
       model.save!.then do
         flash._notices << "Update added"
